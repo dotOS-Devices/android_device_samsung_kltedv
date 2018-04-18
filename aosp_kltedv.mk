@@ -15,10 +15,14 @@
 # limitations under the License.
 #
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, device/samsung/kltedv/full_klte.mk)
 
-$(call inherit-product, device/samsung/kltedv/full_kltedv.mk)
+# Inherit some common aosp stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
+# Include Bootanimation configuration
+TARGET_BOOT_ANIMATION_RES := 1080
+
+## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := kltedv
-PRODUCT_NAME := lineage_kltedv
+PRODUCT_NAME := aosp_kltedv
