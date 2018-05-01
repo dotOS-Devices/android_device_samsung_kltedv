@@ -18,14 +18,14 @@
 $(call inherit-product, device/samsung/kltedv/full_kltedv.mk)
 
 # Inherit some common aosp stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/dot/config/common.mk)
 
 # Include Bootanimation configuration
 TARGET_BOOT_ANIMATION_RES := 1080
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := kltedv
-PRODUCT_NAME := aosp_kltedv
+PRODUCT_NAME := dot_kltedv
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
 DEVICE_MAINTAINERS="Brunowp8" \
